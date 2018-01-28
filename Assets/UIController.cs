@@ -35,10 +35,11 @@ public class UIController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		unityy = Unitychan.transform.position.y;
 		if (this.isGameOver == false) {
-			//if(Unitychan.IsRunning == true){
-			if (unityy < -3) {
+            //Unityちゃんが地面を走っているかどうかを検出
+            unityy = Unitychan.transform.position.y;
+            //if(Unitychan.IsRunning == true){
+            if (unityy < -3) {
 				//走った距離を更新する
 				this.len += this.speed;
 			}

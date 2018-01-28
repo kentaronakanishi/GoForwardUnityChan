@@ -35,15 +35,16 @@ public class CubeController : MonoBehaviour {
 	}
 
 	//コリジョンモードで他のオブジェクトと接触した場合の処理
-	void OnCollisionEnter2D(Collider2D other){
+	private void OnCollisionEnter2D(Collision2D coll){
+        Debug.Log("衝突");
 
-		//障害物に衝突した場合
-//		if (other.tag == "SoudObject") {
-			//衝突判定
-			Debug.Log("衝突");
+        //障害物に衝突した場合
+        		if (coll.gameObject.CompareTag("SoundObject") ){
+            //衝突判定
+                Debug.Log("オブジェクトに衝突");
 
-			//音を出す。
-//			SE.Play();
-//		}
-	}
+            //音を出す。
+            SE.Play();
+       		}
+    }
 }

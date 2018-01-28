@@ -64,7 +64,7 @@ public class UnityChanController : MonoBehaviour {
 		}
 
 		//クリックをやめたら上方向への力を減衰する
-		if (Input.GetMouseButtonDown(0)==false){
+		if (Input.GetMouseButton(0)==false){
 			if(this.rigid2D.velocity.y >0){
 				this.rigid2D.velocity *= this.dump;
 			}
